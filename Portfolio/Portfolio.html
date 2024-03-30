@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .totalheaderline{
+        background-color: dimgrey;
+        padding: 20px;
+    }
+    .headerlinecall{
+        margin-left: 5%;
+        background-color: transparent;
+        font-weight: 600 ;
+    }
+    .totalheaderline2{
+        background-color: blanchedalmond;
+        padding: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nameathead2{
+        background-color: blanchedalmond; 
+        padding: 20px;
+        display: flex;
+        justify-content: flex-start;
+        font-weight: bold;
+        font-size: 3em;
+    }
+    .page1{
+        display: flex;
+        align-items: flex-start;
+    }
+    .definitions1 {
+        flex: 1;
+        margin-left: 40px;
+        margin-top: 6%;
+        word-wrap: break-word;
+    }
+    .image1 {
+        flex: 1;
+        margin-left: 15%;
+        margin-top: 5%;
+        border-radius: 20px;
+        }
+    .image1 img {
+        max-width: 400px;
+        height: auto;
+    }
+    /* Styles for the buttons */
+    .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    }
+    .button {
+    padding: 20px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+    .button:hover {
+    background-color: #400fe1;
+    transform: translateY(-10px);
+    }
+    .page2{
+        display: flex;
+        align-items: flex-start;
+    }
+    .definitions2 {
+        flex: 1;
+        margin-left: 40px;
+        margin-top: 6%;
+        word-wrap: break-word;
+    }
+    .image2 {
+        flex: 1;
+        margin-left: 15%;
+        margin-top: 5%;
+        border-radius: 20px;
+    }
+    .image2 img {
+        max-width: 400px;
+        height: auto;
+    }
+    .page3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+    img {
+        max-width: 80%;
+        height: auto;
+        margin-left: -15%;
+    }
+    .tube1, .tube2, .tube3{
+        width: 300px;
+        height: 20px;
+        background-color: dimgrey; /* Initially grey */
+        position: relative;
+        margin-left: -100%;
+        overflow: hidden;
+        border-radius: 20px; /* Border radius set to 20px */
+    }
+    .tube1:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, blue 0%, blue 50%, dimgrey 50%, dimgrey 100%);
+        background-size: 200% 100%;
+        animation: fill 6s forwards;
+    }
+    @keyframes fill {
+        0% {left: -100%;width: 100%;}
+        50% {left: 0%;width: 80%;}
+        100% {left: 0;width: 80%;}
+    }
+    .tube2:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, blue 0%, blue 50%, dimgrey 50%, dimgrey 100%);
+        background-size: 200% 100%;
+        animation: fill2 6s forwards;
+    }
+    @keyframes fill2 {
+        0% {left: -100%;width: 100%;}
+        50% {left: 0%;width: 60%;}
+        100% {left: 0;width: 60%;}
+    }
+    .tube3:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, blue 0%, blue 50%, dimgrey 50%, dimgrey 100%);
+        background-size: 200% 100%;
+        animation: fill3 6s forwards;
+    }
+    @keyframes fill3 {
+        0% {left: -100%;width: 100%;}
+        50% {left: 0%;width: 60%;}
+        100% {left: 0;width: 60%;}
+        
+    }
+    .tube4, .tube5, .tube6{
+        width: 300px;
+        height: 20px;
+        background-color: dimgrey; /* Initially grey */
+        position: relative;
+        margin-right: 200%;
+        overflow: hidden;
+        border-radius: 20px; /* Border radius set to 20px */
+    }
+    .tube4:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, blue 0%, blue 50%, dimgrey 50%, dimgrey 100%);
+        background-size: 200% 100%;
+        animation: fill4 6s forwards;
+    }
+    @keyframes fill4 {
+        0% {left: -100%;width: 100%;}
+        50% {left: 0%;width: 85%;}
+        100% {left: 0;width: 85%;}
+    }
+    
+    .tube5:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, blue 0%, blue 50%, dimgrey 50%, dimgrey 100%);
+        background-size: 200% 100%;
+        animation: fill5 6s forwards;
+    }
+    @keyframes fill5 {
+        0% {left: -100%;width: 100%;}
+        50% {left: 0%;width: 77%;}
+        100% {left: 0;width: 77%;}
+        
+    }
+    .tube6:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, blue 0%, blue 50%, dimgrey 50%, dimgrey 100%);
+        background-size: 200% 100%;
+        animation: fill6 6s forwards;
+    }
+    @keyframes fill6 {
+        0% {left: -100%;width: 100%;}
+        50% {left: 0%;width: 80%;}
+        100% {left: 0;width: 80%;}
+        
+    }
+    .CVbtn{
+        padding: 15px 20px;
+        background-color: #ff0606; /* Green background color */
+        color: white;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease; /* Transition effect */
+        z-index: 1; /* Ensures the button stays above other elements */ 
+    }
+    .CVbtn:hover {
+        background-color: #45a049; /* Darker green on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow on hover */
+        transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+    <div class="totalheaderline" > <!--First div   -->
+        <a class="headerlinecall">Call<button style="border-radius: 20px;"><i class="fa-solid fa-phone" >+91 7010 8775 47</i></button></a>
+        <a href="" ><button style="margin-left: 3%;border-radius: 20px;"class="headerlocation"><i class="fa-solid fa-location-dot"> Locate me</i></button></a>
+        <a><button onclick="window.location.href='mailto:sanjay2005ragavendra@gmail.com'" style="margin-left: 3%;border-radius: 20px;"class="headerlinemail"><i class="fa-regular fa-envelope" ></i>sanjay2005ragavendra@gmail.com</button></a>
+        <a href="https://www.facebook.com/Sanjay Ragavendra" target="_blank"><button style="margin-left: 25%;border-radius: 20px;font-size: larger;"class="socialmedia"><i class="fa-brands fa-facebook" ></i></button></a>
+        <a href="https://www.instagram.com/sanjay_ragavendra_ofx" target="_blank"><button style="margin-left:  2%;border-radius: 20px;font-size: larger;"class="socialmedia"><i class="fa-brands fa-square-instagram"></i></button></a>
+        <a href=""><button style="margin-left:  2%;border-radius: 20px;font-size: larger;"class="socialmedia"><i class="fa-brands fa-youtube"></i></button></a>
+        <a href="https://www.linkedin.com/in/Sanjay Ragavendra" target="_blank"><button style="margin-left:  2%;border-radius: 20px;font-size: larger;"class="socialmedia"><i class="fa-brands fa-linkedin"></i></button></a>
+        <a href="https://github.com/sanjayragavendra19" target="_blank"><button style="margin-left:  2%;border-radius: 20px;font-size: larger;"class="socialmedia"><i class="fa-brands fa-github"></i></button></a>
+    </div>
+    
+    <div class="totalheaderline2" > <!--second div   -->
+        <a class="morebtn" href="" style="margin-right: 15px;">Skills</a>
+        <a class="morebtn" href="" style="margin-right: 15px;">Projects</a>
+        <a class="morebtn" href="" style="margin-right: 15px;">Acheivements</a>
+        <a class="morebtn" href="" style="margin-right: 15px;">Blog</a>
+        <a class="morebtn" href="" style="margin-right: 15px;">Talks</a>
+        <a class="morebtn" href="">Conctact me</a>
+    </div>
+     <!-- Name at the header    -->
+    <a  class="nameathead2">SANJAY RAGAVENDRA</a>
+                                                                    <!-- PAGE1 -->
+    <div class="page1">
+        <div class="definitions1">
+            <dl>
+                <dt><h1>Hello!</h1></dt>
+                    <dd><h2>My name is Sanjay Ragavendra, and I'm deeply passionate about the ever-evolving world of technology. From tinkering with code to exploring the latest advancements in artificial intelligence, I find immense joy in diving deep into the realms of tech innovation and I'm always eager to explore new technologies and frameworks. Whether it's building innovative web applications with cutting-edge JavaScript frameworks like React.js or diving into the world of machine learning algorithms, I'm up for the challenge!</h2></dd>
+                    <dd style="margin-top: 10%;" class="button-container">
+                    <button class="button">For Hire</button>
+                    <button class="button">My Projects</button>
+                    <button class="button">for Freelancing</button>
+                    </dd>
+            </dl>
+        </div>
+        <div class="image1">
+            <img src="page1image.jpeg" alt="me">
+        </div>
+    </div>
+                                                                            <!-- PAGE2 -->
+    <div class="page2">
+        <div class="definitions2">
+        <dl>
+            <dt><h1>MY EXPERTISE</h1></dt>
+            <dd><h3><i class="fa-solid fa-angles-right"></i> Develop highly interactive Front end / User interfaces for your web and mobile applications</h3></dd>
+            <dd><h3><i class="fa-solid fa-angles-right"></i> Progressive Web Applications in normal and SPA Stacks.</h3></dd>
+            <dd><h3><i class="fa-solid fa-angles-right"></i> Integration of third party services such as Firebase / AWS / Digital Ocean.</h3></dd>
+        </dl>
+        </div>
+        <div class="image2">
+            <img src="page2image.jpg" alt="Known Technology">
+        </div>
+    </div>
+                                                                    <!-- PAGE3 -->
+    <div class="page3">
+        <div style="margin-left: 40px;margin-top: -52%;" class="page3head"><a><h1>MY PROFICIENCY</h1></a></div>
+        <div class="left">
+           <div class="leftdef1">
+            <dl>
+                <dt style="margin-left: -100%;margin-top: -10%;"><h3>Frontend/Design</h3></dt>
+                <dt><div class="tube1"></div></dt>
+                <dt style="margin-left: -100%;margin-top: 35%;"><h3>Backend</h3></dt>
+                <dt><div class="tube2"></div></dt>
+                <dt style="margin-left: -100%;margin-top: 35%;"><h3>Programming</h3></dt>
+                <dt><div class="tube3"></div></dt>
+            </dl>
+           </div>
+        </div>
+        <div class="image3">
+            <img src="page3image.jpeg" alt="Proficiency">
+        </div>
+        <div class="right">
+            <div class="rightdef1">
+                <dl>
+                    <dt style="margin-right: 40px;margin-top: -10%;"><h3>Comunication Skill</h3></dt>
+                    <dt><div style="margin-right: 30%" class="tube4"></div></dt>
+                    <dt style="margin-top: 35%;"><h3>Problem Solving</h3></dt>
+                    <dt><div class="tube5"></div></dt>
+                    <dt style="margin-top: 35%;"><h3>Vacabulary</h3></dt>
+                    <dt><div class="tube6"></div></dt>
+                </dl>
+            </div>
+        </div>
+    </div>
+                                                                        <!-- PAGE4 -->
+    <div class="page4">
+        <div class="final" style="margin-left: 40px;">
+                <dl>
+                    <dt><h1>Reach Out to me!</h1></dt>
+                    <dt><h2>JUST SAY HI, MY INBOX IS OPEN FOR ALL!</h2></dt>
+                    <dt><h3>"Frontend Developer| Open Source Contributor| Speaker| Tech Writer<i class="fa-solid fa-pen-nib"></i>"</h3></dt>
+                    <dt><br></dt>
+                    <dt><i class="fa-solid fa-location-dot"></i>Tamil Nadu, India</dt>
+                    <dt><br></dt>
+                    <a href="https://www.facebook.com/Sanjay Ragavendra" target="_blank" ><button style="border-radius: 20px;font-size: larger;"><i class="fa-brands fa-facebook" ></i></button></a>
+                    <a  href="https://www.instagram.com/sanjay_ragavendra_ofx" target="_blank"><button style="margin-left:2%;border-radius: 20px;font-size: larger;"><i class="fa-brands fa-square-instagram"></i></button></a>
+                    <a  href="" target="_blank"><button style="margin-left:2%;border-radius: 20px;font-size: larger;"><i class="fa-brands fa-youtube"></i></button></a>
+                    <a href="https://www.linkedin.com/in/Sanjay Ragavendra" target="_blank"><button  style="margin-left:2%;border-radius: 20px;font-size: larger;"><i class="fa-brands fa-linkedin"></i></button></a>
+                    <a  href="https://github.com/sanjayragavendra19" target="_blank"><button style="margin-left:2%;border-radius: 20px;font-size: larger;"><i class="fa-brands fa-github"></i></button></a>
+                    <a onclick="window.location.href='mailto:sanjay2005ragavendra@gmail.com'" target="_blank"><button style="margin-left:2%;border-radius: 20px;font-size: larger;"><i class="fa-regular fa-envelope" ></i></button></a>
+                    <img style="margin-top: -18%;margin-left:73%;border-radius: 50%;width: 300px;height: 315px;" src="myimage.jpg" alt="MY IMAGE">
+                </dl>
+        </div>
+        <div >
+            <a href="RESUME.pdf" download="SANJAY RAGAVENDRA RESUME.pdf">
+                <button style="margin-left: 45%;" class="CVbtn"><h3>Download<i class="fa-solid fa-download"></i></h3><h1>RESUME</h1></button>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <small>&copy; Copyright 2024,</small>
+    </footer>
+    
+</body>
+</html>
